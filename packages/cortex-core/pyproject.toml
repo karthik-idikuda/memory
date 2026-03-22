@@ -1,0 +1,40 @@
+[build-system]
+requires = ["setuptools>=68.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "cortex-core"
+version = "1.0.0"
+description = "CORTEX-X Omega — The World's First Metacognitive AI Brain"
+readme = "README.md"
+license = {text = "MIT"}
+requires-python = ">=3.10"
+authors = [{name = "Karthik", email = "karthik@cortex-x.ai"}]
+keywords = ["ai", "metacognition", "memory", "reasoning", "self-aware"]
+classifiers = [
+    "Development Status :: 5 - Production/Stable",
+    "Intended Audience :: Developers",
+    "Topic :: Scientific/Engineering :: Artificial Intelligence",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+]
+
+# ZERO external dependencies for core
+dependencies = []
+
+[project.optional-dependencies]
+anthropic = ["anthropic>=0.34.0"]
+openai = ["openai>=1.0.0"]
+ollama = ["ollama>=0.3.0"]
+all = ["anthropic>=0.34.0", "openai>=1.0.0", "ollama>=0.3.0"]
+dev = ["pytest>=8.0"]
+
+[project.scripts]
+cortex = "cortex.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["."]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

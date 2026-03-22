@@ -1,0 +1,48 @@
+# ═══════════════════════════════════════════════
+# NEURON-X Omega — Example Session in NRNLANG-Ω
+# Shows what a real conversation session looks like
+# Generated format matches /nrn session output
+# ═══════════════════════════════════════════════
+
+PULSE begins T[2026.02.27:14:30:00]
+
+# User says: "I just moved from London to Tokyo"
+
+# AMYGDALA processes input:
+#   TOKENIZE → {moved, london, tokyo}
+#   SEARCH SOMA → finds engram[Xk3m]: "user lives in London"
+#   SIMILARITY = 0.50
+#   SURPRISE = 0.609
+#   ACTION = FORGE (0.25 < 0.609 < 0.85)
+
+⊕ FORGE engram("user lives in Tokyo") [identity] {conf:0.90, emotion:happy}
+⊕ FORGE engram("user moved from London to Tokyo") [event] {conf:0.88, emotion:excited}
+
+# CONTRADICTION_ENGINE detects:
+#   "user lives in Tokyo" ## "user lives in London"
+#   NEW_SCORE(0.90) > OLD_SCORE(0.497) × 1.10
+
+## CLASH engram("user lives in Tokyo") ## engram[Xk3m]  ⚡ surprise:0.61  → SUPERSEDED
+
+# AXON_ENGINE after processing:
+WEAVE engram[Nw7p] <=> engram[Pq2r] {synapse:0.55}
+
+# THERMAL_MANAGER update:
+#   engram[Nw7p] heat=0.54 ~> [W]
+#   engram[Xk3m] heat=0.30 ~> [C] (expired)
+
+# User asks: "what do you know about where I live?"
+INVOKE CORTEX "where I live" @7 AI
+
+# WSRA-X scores:
+#   engram[Nw7p] → 6.525 ← TOP
+#   engram[Pq2r] → 5.854 ← 2nd
+#   engram[Xk3m] → 3.201 ← penalized
+
+AUDIT SOMA
+
+PULSE ends
+
+# ═══════════════════════════════════════════════
+# End of session
+# ═══════════════════════════════════════════════

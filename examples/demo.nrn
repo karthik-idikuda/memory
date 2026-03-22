@@ -1,0 +1,31 @@
+# ═══════════════════════════════════════════════
+# NEURON-X Omega — NRNLANG-Ω Demo Script
+# This file demonstrates all major NRNLANG-Ω commands
+# Run: python utils/nrnlang.py examples/demo.nrn
+# ═══════════════════════════════════════════════
+
+# ── Memory Creation ──
+# FORGE creates new engrams in the SOMA database.
+# Syntax: FORGE engram("text") [decay_class] {properties}
+
+FORGE engram("user loves building AI systems") [identity] {conf:0.92, emotion:happy}
+FORGE engram("user lives in Tokyo") [identity] {conf:0.88, emotion:happy}
+FORGE engram("user prefers Python over JavaScript") [opinion] {conf:0.85, emotion:curious}
+FORGE engram("user went hiking last weekend") [event] {conf:0.80, emotion:excited}
+FORGE engram("the earth orbits the sun") [fact] {conf:0.99, emotion:neutral}
+
+# ── Memory Retrieval ──
+# INVOKE queries the CORTEX (retrieval engine) for relevant memories.
+# Syntax: INVOKE CORTEX "query" @N AI
+
+INVOKE CORTEX "What does user enjoy doing?" @7 AI
+INVOKE CORTEX "where does user live" @3 AI
+
+# ── Brain Maintenance ──
+# AUDIT runs thermal zone checks on all memories.
+
+AUDIT SOMA
+
+# ═══════════════════════════════════════════════
+# End of demo script
+# ═══════════════════════════════════════════════
