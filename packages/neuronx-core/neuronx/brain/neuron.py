@@ -33,7 +33,7 @@ import time
 import logging
 from pathlib import Path
 from dataclasses import dataclass, field
-from typing import Optional, List, Tuple, Dict, Any
+from typing import Optional, List, Tuple
 
 from neuronx.config import (
     ZONE_HOT, ZONE_WARM, DEFAULT_TOP_K, AUTO_SAVE_INTERVAL,
@@ -41,7 +41,7 @@ from neuronx.config import (
 from neuronx.core.node import EngramNode
 from neuronx.core.integrity import generate_engram_id
 from neuronx.core.soma import SomaDB
-from neuronx.core.surprise import Amygdala, SurpriseResult
+from neuronx.core.surprise import Amygdala
 from neuronx.core.retrieval import RetrievalEngine
 from neuronx.core.bonds import BondEngine
 from neuronx.core.zones import ThermalManager

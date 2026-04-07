@@ -25,7 +25,7 @@ BUG-007 FIX: Reawakening runs at session start.
 import math
 import time
 import logging
-from typing import Dict, Set, List, Optional
+from typing import Dict, List
 
 from neuronx.config import (
     ZONE_HOT, ZONE_WARM, ZONE_COLD, ZONE_SILENT,

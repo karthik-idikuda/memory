@@ -8,7 +8,7 @@ BUG-014 FIX: Pre-filter contradiction candidates using subject index.
 Reduces O(n²) to approximately O(n × k) where k << n.
 """
 
-from typing import Dict, Set, List
+from typing import Dict, Set
 
 from neuronx.core.node import EngramNode
 from neuronx.utils.tokenizer import tokenize

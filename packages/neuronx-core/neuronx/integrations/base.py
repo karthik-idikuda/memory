@@ -5,9 +5,9 @@
 ╚══════════════════════════════════════════════════════════╝
 """
 
-from typing import List, Dict, Optional, Any
+from typing import List, Dict, Any
 
-from neuronx.brain.neuron import NeuronBrain, ContextResult
+from neuronx.brain.neuron import NeuronBrain
 
 
 class BaseIntegration:

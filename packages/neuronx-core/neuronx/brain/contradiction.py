@@ -23,7 +23,7 @@ FORMULA — CONTRADICTION RESOLUTION:
 import time
 import logging
 from dataclasses import dataclass
-from typing import Optional, Dict, List
+from typing import Optional, Dict
 
 from neuronx.config import (
     SUPERSEDE_MARGIN, CONFIDENCE_SUPERSEDE_HIT, CONFIDENCE_CLASH_HIT,
@@ -115,7 +115,7 @@ class ContradictionEngine:
         # High similarity with different content could be an update
         if sim > 0.5:
             # Substantial overlap but not identical — possible update
-            shared = new_tokens & old_tokens
+            new_tokens & old_tokens
             diff_new = new_tokens - old_tokens
             diff_old = old_tokens - new_tokens
             if diff_new and diff_old:

@@ -15,7 +15,6 @@ import time
 from typing import Optional
 
 from neuronx.core.soma import SomaDB
-from neuronx.core.node import EngramNode
 
 import logging
 logger = logging.getLogger("NEURONX.EXPORT")

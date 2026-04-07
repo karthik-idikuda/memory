@@ -20,13 +20,12 @@ BUG-008 FIX: prune_weak_bonds removes from BOTH sides of each bond pair.
 
 import time
 import logging
-from typing import List, Dict, Set
+from typing import List, Dict
 
 from neuronx.config import (
     BOND_PRUNE_THRESHOLD, BOND_REINFORCE_AMOUNT, BOND_TIME_WINDOW,
     BOND_TIME_MAX, BOND_WORD_MIN_SHARED, BOND_WORD_MAX,
-    BOND_EMOTION_VALUE, MAX_SYNAPSE, HERALD_DECAY_FACTOR,
-    AXON_TYPE_TIME, AXON_TYPE_WORD, AXON_TYPE_EMOTION,
+    BOND_EMOTION_VALUE, MAX_SYNAPSE, AXON_TYPE_TIME, AXON_TYPE_WORD, AXON_TYPE_EMOTION,
     AXON_TYPE_HERALD,
 )
 from neuronx.core.node import EngramNode

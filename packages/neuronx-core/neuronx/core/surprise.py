@@ -24,9 +24,7 @@ FORMULA:
     return 1.0 - best
 """
 
-import math
-import re
-from typing import Optional, List, Dict, Tuple
+from typing import Optional, List, Dict
 from dataclasses import dataclass
 
 from neuronx.config import (

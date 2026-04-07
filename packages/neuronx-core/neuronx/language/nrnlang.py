@@ -23,12 +23,11 @@ Commands:
 
 import re
 import logging
-from typing import Optional, Dict, Any, List
+from typing import Dict, Any, List
 
 from neuronx.config import (
     NRNLANG_ACTION_SYMBOLS, NRNLANG_ZONE_SYMBOLS,
-    NRNLANG_EMOTION_SYMBOLS, NRNLANG_EXISTENCE_SYMBOLS,
-    NRNLANG_TRUTH_SYMBOLS, DEFAULT_TOP_K,
+    NRNLANG_EMOTION_SYMBOLS, NRNLANG_TRUTH_SYMBOLS, DEFAULT_TOP_K,
 )
 from neuronx.exceptions import NRNSyntaxError, NRNRuntimeError
 

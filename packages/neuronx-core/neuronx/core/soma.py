@@ -34,7 +34,6 @@ import time
 import zlib
 import shutil
 import logging
-from pathlib import Path
 from typing import Optional, Dict, List
 
 from neuronx.config import (
@@ -50,7 +49,6 @@ from neuronx.core.integrity import (
 )
 from neuronx.exceptions import (
     NeuronXCorruptionError, NeuronXLockTimeoutError,
-    NeuronXIntegrityError,
 )
 
 logger = logging.getLogger("NEURONX.SOMA")
